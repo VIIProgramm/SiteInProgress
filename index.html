@@ -2,12 +2,97 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>MyHomework</title>
+    <style>
+      header{
+        display: flex;
+        place-items: center;
+        min-width: 320px;
+        min-height: 10px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 3.2em;
+        line-height: 1.1;
+      }
+
+      body{
+        background-color: rgb(129, 225, 241);
+      }
+      .gitPos{
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-around;
+        border-style: solid;
+        border-width: 3px;
+        border-color: black;
+        border-radius: 10px;
+        max-width: 1000px;
+        margin: 35px auto;
+      }
+      .git{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+      p{
+        font-style: italic;
+        font-size: 20px;
+      }
+    </style>
   </head>
   <body>
-    <div id="app"></div>
+    <header> <h1> Моя домашка </h1></header>
+    <div class="gitPos">
+      <div class="git"> 
+        <h2> Мой Git</h2>
+        <a href = 'https://github.com/VIIProgramm'> VIIProgramm </a>
+      </div>
+    </div>
+    <div class="gitPos">
+      <div class="git"> 
+        <p> Запрашивать данные у пользователя необходимо с помощью
+          prompt(), а выводить результат с помощью alert().
+          1
+          Запросите у пользователя его имя и выведите в ответ:
+          «Привет, его имя!».
+          2
+          Запросите у пользователя год его рождения, посчитайте,
+          сколько ему лет и выведите результат. Текущий год укажите
+          в коде как константу.
+          3
+          Запросите у пользователя длину стороны квадрата и вы-
+          ведите периметр такого квадрата.
+          4
+          Запросите у пользователя радиус окружности и выведите
+          площадь такой окружности.</p>
+        <pre><code>
+          // Задание 1
+          let name = prompt('Введите имя')
+          alert(name)
+            
+          // Задание 2
+          const year = 2023
+          let yearOfBirth = +(prompt('Введите год важего рождения') as string)
+          alert(year - yearOfBirth)
+
+          // Задание 3
+          let lenght = +(prompt('Введите длинну квадрата') as string)
+          alert(lenght ** 3)
+
+          // Задание 4
+          let radius = +(prompt('Введите радиус окружности') as string)
+          alert((radius ** 2) * Math.PI)
+        </code></pre>
+        <a href="https://github.com/VIIProgramm/dz-1">Задание в Git</a>
+      </div>
+    </div>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
