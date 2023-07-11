@@ -5,11 +5,184 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyHomework</title>
-    <script type="module" crossorigin src="/assets/index-2b8d9b28.js"></script>
-    <link rel="stylesheet" href="/assets/index-e79c6e1a.css">
+    <style>
+      header{
+        display: flex;
+        place-items: center;
+        min-width: 320px;
+        min-height: 10px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 3.2em;
+        line-height: 1.1;
+      }
+
+      body{
+        background-color: rgb(129, 225, 241);
+      }
+      .gitPos{
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-around;
+        border-style: solid;
+        border-width: 3px;
+        border-color: black;
+        border-radius: 10px;
+        max-width: 1000px;
+        margin: 35px auto;
+      }
+      .git{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+      p{
+        font-style: italic;
+        font-size: 20px;
+      }
+    </style>
+    <script type="module" crossorigin src="/SiteInProgress/assets/index-2b8d9b28.js"></script>
+    <link rel="stylesheet" href="/SiteInProgress/assets/index-e79c6e1a.css">
   </head>
   <body>
     <header> <h1> Моя домашка </h1></header>
+    <div class="gitPos">
+      <div class="git"> 
+        <h2> Мой Git</h2>
+        <a href = 'https://github.com/VIIProgramm'> VIIProgramm </a>
+      </div>
+    </div>
+    <div class="gitPos">
+      <div class="git"> 
+        <p> Запрашивать данные у пользователя необходимо с помощью
+          prompt(), а выводить результат с помощью alert().
+          1
+          Запросите у пользователя его имя и выведите в ответ:
+          «Привет, его имя!».
+          2
+          Запросите у пользователя год его рождения, посчитайте,
+          сколько ему лет и выведите результат. Текущий год укажите
+          в коде как константу.
+          3
+          Запросите у пользователя длину стороны квадрата и вы-
+          ведите периметр такого квадрата.
+          4
+          Запросите у пользователя радиус окружности и выведите
+          площадь такой окружности.
+          5
+          Запросите у пользователя расстояние в км между двумя
+          городами и за сколько часов он хочет добраться. Посчи-
+          тайте скорость, с которой необходимо двигаться, чтобы
+          успеть вовремя.
+          6
+          Реализуйте конвертор валют. Пользователь вводит долла-
+          ры, программа переводит в евро. Курс валюты храните в
+          константе.
+          7
+          Пользователь указывает объем флешки в Гб. Программа
+          должна посчитать сколько файлов размером в 820 Мб по-
+          мещается на флешку.
+          8
+          Пользователь вводит сумму денег в кошельке и цену одной
+          шоколадки. Программа выводит сколько шоколадок может
+          купить пользователь и сколько сдачи у него останется.
+          9
+          Запросите у пользователя трехзначное число и выведите
+          его задом наперед. Для решения задачи вам понадобится
+          оператор % (остаток от деления).
+          10 Запросите у пользователя целое число и выведите в ответ,
+          четное число или нет. В задании используйте логические
+          операторы. В задании не надо использовать if или switch.
+        </p>
+        <pre><code>
+          // Задание 1
+          let name = prompt('Введите имя')
+          alert(name)
+
+          // Задание 2
+          const year = 2023
+          let yearOfBirth = +(prompt('Введите год важего рождения') as string)
+          alert(year - yearOfBirth)
+
+          // Задание 3
+          let lenght = +(prompt('Введите длинну квадрата') as string)
+          alert(lenght ** 3)
+
+          // Задание 4
+          let radius = +(prompt('Введите радиус окружности') as string)
+          alert((radius ** 2) * Math.PI)
+
+          // Задание 5
+          let distace = +(prompt('Введите расстояние между городуми в км(единицу измерения указывать не нужно)') as string)
+          let time = +(prompt('Введите за сколько часов вы хотите проехать это расстояние') as string)
+          alert('Для этого вам нужно двигаться со скоростью ' + distace / time + ' км/час') 
+
+          // задание 6
+          const usdEuro = 0.92
+          let dollarUS = +(prompt('Доллар США') as string)
+          alert('Евро ' + usdEuro * dollarUS)
+
+          // задание 7
+          let memoryBank = +(prompt('Введите количество свободных ГБ в вашем електронном хранители') as string) * 1024
+          alert('Поместитья ' + memoryBank / 820 + ' фаилов')
+
+          // задание 8
+          let balance = +(prompt('Введите сколько рублей на вашем балансе') as string)
+          let price = +(prompt('Введите стоймость 1 шоколадки') as string)
+          alert('Вы можете купить ' + balance/price + ' шоколадок')
+
+          //Задание 9
+          let number = +(prompt('Введите трёхзначное число') as string)
+          let numberRev = ''
+          for (let i = 0; i *меньше* 3; i++){
+              let n =number%10
+              numberRev += String(n)
+              number = Math.floor(number/10)
+          }
+          alert('Вот это число, но наоборот: ' + numberRev)
+
+          //Задание 10
+          number = +(prompt('Введите число') as string)
+          number % 2 == 0 ? alert('Чётное'):alert('Нечётное')
+        </code></pre>
+        <a href="https://github.com/VIIProgramm/dz-1">Задание в Git</a>
+      </div>
+    </div>
+    <div class="gitPos">
+      <div class="git"> 
+        <p> 
+          1
+          Написать функцию возведения числа в степень.
+        </p>
+        <pre><code>
+          // 1 Задание
+          function stepen (n :number, k:number):number{
+            let cN = n
+            if (k > 0){
+              for(let i = 0; i *меньше* (k - 1); i++){
+                cN = cN * n 
+              }
+              return cN
+            }
+            if (k *меньше* 0){
+              for(let i = 0; i > (k + 1); i--){
+                cN = cN * n
+              }
+              return 1/cN
+            }
+            return 1
+          }
+
+          alert(stepen(2, 2))
+        </code></pre>
+        <a href="https://github.com/VIIProgramm/dz-2">Задание в Git</a>
+      </div>
+    </div>
+
     
   </body>
 </html>
